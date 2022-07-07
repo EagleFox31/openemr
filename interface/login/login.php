@@ -1,30 +1,5 @@
 <?php
 
-/**
- * Login screen.
- *
- * @package OpenEMR
- * @link    http://www.open-emr.org
- * @author  Rod Roark <rod@sunsetsystems.com>
- * @author  Brady Miller <brady.g.miller@gmail.com>
- * @author  Kevin Yeh <kevin.y@integralemr.com>
- * @author  Scott Wakefield <scott.wakefield@gmail.com>
- * @author  ViCarePlus <visolve_emr@visolve.com>
- * @author  Julia Longtin <julialongtin@diasp.org>
- * @author  cfapress
- * @author  markleeds
- * @author  Tyler Wrenn <tyler@tylerwrenn.com>
- * @author  Ken Chapple <ken@mi-squared.com>
- * @author  Daniel Pflieger <daniel@mi-squared.com> <daniel@growlingflea.com>
- * @author  Robert Down <robertdown@live.com>
- * @copyright Copyright (c) 2019 Brady Miller <brady.g.miller@gmail.com>
- * @copyright Copyright (c) 2020 Tyler Wrenn <tyler@tylerwrenn.com>
- * @copyright Copyright (c) 2021 Ken Chapple <ken@mi-squared.com>
- * @copyright Copyright (c) 2021 Daniel Pflieger <daniel@mi-squared.com> <daniel@growlingflea.com>
- * @copyright Copyright (c) 2021-2022 Robert Down <robertdown@live.com>
- * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
-
 use OpenEMR\Common\Twig\TwigContainer;
 use OpenEMR\Services\FacilityService;
 
@@ -188,10 +163,10 @@ if ($t1 && !$t2) {
 }
 
 $regTranslations = json_encode(array(
-    'title' => xla('OpenEMR Product Registration'),
+    'title' => xla('DPI+ Product Registration'),
     'pleaseProvideValidEmail' => xla('Please provide a valid email address'),
     'success' => xla('Success'),
-    'registeredSuccess' => xla('Your installation of OpenEMR has been registered'),
+    'registeredSuccess' => xla('Your installation of DPI+ has been registered'),
     'submit' => xla('Submit'),
     'noThanks' => xla('No Thanks'),
     'registeredEmail' => xla('Registered email'),

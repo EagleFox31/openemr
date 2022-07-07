@@ -44,7 +44,7 @@
         }
     </script>
 </head>
-<body class="login">
+<body class="login" style="">
     <form method="POST" id="login_form" autocomplete="off" action="../main/main_screen.php?auth=login&site={{ siteID|attr_url }}" target="_top" name="login_form">
         <div class="{{ loginRow|attr }}">
             <div class="{{ formArea|attr }}">
@@ -59,18 +59,18 @@
 
                 {% if loginFail == 1 %}
                 <div class="bg-danger text-light py-2 px-3 login-failure mb-3 font-weight-bold">
-                    {{ "Invalid username or password"|xlt }}
+                    {{ "Mot de passe ou nom d'utilisateur invalide"|xlt }}
                 </div>
                 {% endif %}
 
                 <div id="standard-auth-username" class="form-group">
-                    <label for="authUser" class="text-right {{ srOnly }}">{{ "Username"|xlt }}</label>
-                    <input type="text" class="form-control" id="authUser" name="authUser" placeholder="{{ "Username"|xla }}">
+                    <label for="authUser" class="text-right {{ srOnly }}">{{ "Nom d'utilisateur"|xlt }}</label>
+                    <input type="text" class="form-control" id="authUser" name="authUser" placeholder="{{ "Nom d'utilisateur"|xla }}">
                 </div>
 
                 <div id="standard-auth-password" class="form-group">
-                    <label for="clearPass" class="text-right {{ srOnly }}">{{ "Password"|xlt }}</label>
-                    <input type="password" class="form-control" id="clearPass" name="clearPass" placeholder="{{ "Password"|xla }}">
+                    <label for="clearPass" class="text-right {{ srOnly }}">{{ "Mot de passe"|xlt }}</label>
+                    <input type="password" class="form-control" id="clearPass" name="clearPass" placeholder="{{ "Mot de passe"|xla }}">
                 </div>
 
                 {{ divApp }}
@@ -128,7 +128,7 @@
                 {% if displayExtraLogo %}
                 <div class="text-center">
                     <span class="d-inline-block w-40">
-                        {{ primaryLogoSrc|raw }}
+                        <img class="login-logo" src="../../public/images/5.PNG" alt="dpi">
                     </span>
                     <span class="d-inline-block w-15 login-bg-text-color"><i class="fas fa-plus fa-2x"></i></span>
                     <span class="d-inline-block w-40">
@@ -137,12 +137,19 @@
                 </div>
                 {% else %}
                 <div class="mx-auto m-4 w-75">
-                    {{ primaryLogoSrc|raw }}
+          
+                       <img class="login-logo" src="../../public/images/5.PNG" alt="dpi">
                 </div>
+               <!--<div class="dip">
+                       <table>
+                            <tr><td style="border-radius: 75px;"><p><b>Dossier de Patient Informatisé</b></p></td></tr>
+                        </table>
+                </div>-->
                 {% endif %}
 
                 {% if displayLoginLabel %}
                 <div class="text-center login-title-label">
+                    <!--<p class="text-center text-white lead" style="margin-right: 50px;">Made in Cameroon</p>-->
                         {{ title|text }}
                     </div>
                 {% endif %}
@@ -165,7 +172,7 @@
                 {% endif %}
 
                 {% if displayAck %}
-                    <p class="text-center small"><a href="../../acknowledge_license_cert.html" class="text-white" target="main">{{ "Acknowledgments, Licensing and Certification"|xlt }}</a></p>
+                    <p class="text-center small"><a href="" class="text-white" target="main">{{ "Made in Cameroon"|xlt }}</a></p>
                 {% endif %}
             </div>
         </div>
@@ -175,7 +182,7 @@
                     <div class="modal-header"></div>
                     <div class="modal-body">
                         <p class="context">
-                            {{ "Register your installation with OpenEMR Foundation to receive important notifications, such as security fixes and new release announcements."|xlt }}
+                            {{ "Register your installation with DPI+ to receive important notifications, such as security fixes and new release announcements."|xlt }}
                         </p>
                         <input placeholder="{{ "email"|xla }}" type="email" class="email w-100 text-body form-control" />
                         <p class="message font-italic"></p>
@@ -190,6 +197,45 @@
     </form>
 </body>
 </html>
+<style>
+
+    .btn-primary {
+        color: #f1fbf5;
+        background-color: #0fb598;
+        border-color: #11ad92;
+    }
+    .bg-primary {
+        background-color: #6b6b6b!important;
+    }
+    .text-center text-white lead{
+        margin-right: 50px;
+    }
+    .logo-in{
+
+    }
+    .login-logo{
+        width: 397px;
+        height: 246px;
+        border-radius: 38px;
+        margin-right: 560px;
+        margin-left: 17px;
+        margin-bottom: -22px;
+        object-fit: fill;
+}
+    }
+    .dip{
+        border-style: solid;
+        box-sizing: content-box;
+        border-style: solid;
+        margin-top: -124px;
+        margin-bottom: 57px;
+        margin-left: 404px;
+        margin-right: -29px;
+        
+    }
+
+</style>
+
 {% if displayGoogleSignin %}
 <script type="text/javascript">
     // This variable controls whether we should login to OpenEMR

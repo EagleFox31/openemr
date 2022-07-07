@@ -1,29 +1,5 @@
 <?php
 
-/* This is a template for printing patient statements and collection
- * letters.  You must customize it to suit your practice.  If your
- * needs are simple then you do not need programming experience to do
- * this - just read the comments and make appropriate substitutions.
- * All you really need to do is replace the [strings in brackets].
- *
- * @package OpenEMR
- * @author Rod Roark <rod@sunsetsystems.com>
- * @copyright Copyright (c) 2006 Rod Roark <rod@sunsetsystems.com>
- * @author Bill Cernansky <bill@mi-squared.com>
- * @copyright Copyright (c) 2009 Bill Cernansky <bill@mi-squared.com>
- * @author Tony McCormick <tony@mi-squared.com>
- * @copyright Copyright (c) 2009 Tony McCormick <tony@mi-squared.com>
- * @author Raymond Magauran <magauran@medfetch.com>
- * @copyright Copyright (c) 2016 Raymond Magauran <magauran@medfetch.com>
- * @author Jerry Padgett <sjpadgett@gmail.com>
- * @copyright Copyright (c) 2017 Jerry Padgett <sjpadgett@gmail.com>
- * @author Stephen Waite <stephen.waite@cmsvt.com>
- * @copyright Copyright (c) 2020 Stephen Waite <stephen.waite@cmsvt.com>
- * @author Daniel Pflieger <daniel@growlingflea.com>
- * @copyright Copyright (c) 2018 Daniel Pflieger <daniel@growlingflea.com>
- * @link https://github.com/openemr/openemr/tree/master
- * @license https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
 
 use OpenEMR\Common\Crypto\CryptoGen;
 

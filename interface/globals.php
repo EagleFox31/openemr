@@ -1,16 +1,5 @@
 <?php
 
-/**
- * Default values for optional variables that are allowed to be set by callers.
- *
- * @package   OpenEMR
- * @link      http://www.open-emr.org
- * @author    Brady Miller <brady.g.miller@gmail.com>
- * @author    Rod Roark <rod@sunsetsystems.com>
- * @copyright Copyright (c) 2018-2019 Brady Miller <brady.g.miller@gmail.com>
- * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
-
 // Checks if the server's PHP version is compatible with OpenEMR:
 require_once(__DIR__ . "/../src/Common/Compatibility/Checker.php");
 $response = OpenEMR\Common\Compatibility\Checker::checkPhpVersion();

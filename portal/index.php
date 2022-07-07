@@ -1,21 +1,4 @@
 <?php
-
-/**
- * import_template.php
- *
- * @package   OpenEMR
- * @link      https://www.open-emr.org
- * @author    Cassian LUP <cassi.lup@gmail.com>
- * @author    Jerry Padgett <sjpadgett@gmail.com>
- * @author    Brady Miller <brady.g.miller@gmail.com>
- * @author    Tyler Wrenn <tyler@tylerwrenn.com>
- * @copyright Copyright (c) 2011 Cassian LUP <cassi.lup@gmail.com>
- * @copyright Copyright (c) 2016-2022 Jerry Padgett <sjpadgett@gmail.com>
- * @copyright Copyright (c) 2019 Brady Miller <brady.g.miller@gmail.com>
- * @copyright Copyright (c) 2020 Tyler Wrenn <tyler@tylerwrenn.com>
- * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
-
 //setting the session & other config options
 
 // Will start the (patient) portal OpenEMR session/cookie.
@@ -41,7 +24,7 @@ $landingpage = "index.php?site=" . urlencode($_SESSION['site_id']);
 
 //exit if portal is turned off
 if (!(isset($GLOBALS['portal_onsite_two_enable'])) || !($GLOBALS['portal_onsite_two_enable'])) {
-    echo xlt('Patient Portal is turned off');
+    echo xlt('Portail Patient non activé');
     exit;
 }
 $auth['portal_pwd'] = '';
@@ -435,10 +418,10 @@ if (!(isset($_SESSION['password_update']) || (!empty($GLOBALS['portal_two_pass_r
             </form>
         <?php } else {
             ?> <!-- Main logon -->
-        <img class="img-responsive center-block login-image" src='<?php echo $GLOBALS['images_static_relative']; ?>/login-logo.png' />
+        <img class="img-responsive center-block login-image" src='<?php echo $GLOBALS['images_static_relative']; ?>/5.PNG' />
         <form class="text-center" action="get_patient_info.php" method="POST" onsubmit="return process()">
             <fieldset>
-                <legend class="bg-primary text-white pt-2 py-1"><h3><?php echo xlt('Patient Portal Login'); ?></h3></legend>
+                <legend class="bg-primary text-white pt-2 py-1"><h3><?php echo xlt('Portail Patient'); ?></h3></legend>
                 <div class="jumbotron jumbotron-fluid px-5 py-3">
                     <div class="form-row my-3">
                         <label class="col-md-2 col-form-label" for="uname"><?php echo xlt('Username') ?></label>
@@ -517,7 +500,37 @@ if (!(isset($_SESSION['password_update']) || (!empty($GLOBALS['portal_two_pass_r
             </button>
         </div>
     </div>
-
+    <style>
+        .form-control {
+            border-radius: 62.25rem;
+        }
+        .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            background-color: #ccc;
+            border-radius: 0.3rem;
+        }
+        .jumbotron-fluid {
+            padding-right: 0;
+            padding-left: 0;
+            border-radius: 20px;
+        }
+        #wrapper {
+            background-color: #6b6b6b;
+            margin: 0 2px 10px;
+            padding: 25px;
+            position: relative;
+        }
+        .bg-primary {
+            background-color: #11a188!important;
+            border-radius: 15px;
+        }
+        .btn-success {
+            color: #fff;
+            background-color: #11a188;
+            border-color: #11a188;
+        }
+    </style>
     <script>
         var tab_mode = true;
         var webroot_url = <?php echo js_escape($GLOBALS['web_root']) ?>;

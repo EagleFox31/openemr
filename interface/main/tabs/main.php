@@ -1,20 +1,5 @@
 <?php
 
-/**
- * main.php
- *
- * @package   OpenEMR
- * @link      http://www.open-emr.org
- * @author    Kevin Yeh <kevin.y@integralemr.com>
- * @author    Brady Miller <brady.g.miller@gmail.com>
- * @author    Ranganath Pathak <pathak@scrs1.org>
- * @author    Jerry Padgett <sjpadgett@gmail.com>
- * @copyright Copyright (c) 2016 Kevin Yeh <kevin.y@integralemr.com>
- * @copyright Copyright (c) 2016-2019 Brady Miller <brady.g.miller@gmail.com>
- * @copyright Copyright (c) 2019 Ranganath Pathak <pathak@scrs1.org>
- * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
-
 $sessionAllowWrite = true;
 require_once(__DIR__ . '/../../globals.php');
 require_once $GLOBALS['srcdir'] . '/ESign/Api.php';
@@ -335,8 +320,8 @@ if (!empty($GLOBALS['kernel']->getEventDispatcher())) {
     <div id="mainBox" <?php echo $disp_mainBox ?>>
         <nav class="navbar navbar-expand-xl navbar-light bg-light py-0">
             <?php if ($GLOBALS['display_main_menu_logo'] === '1') : ?>
-            <a class="navbar-brand mt-2 mt-xl-0 mr-3 mr-xl-2" href="https://www.open-emr.org" title="OpenEMR <?php echo xla("Website"); ?>" rel="noopener" target="_blank">
-                <?php echo file_get_contents($GLOBALS['images_static_absolute'] . "/menu-logo.svg"); ?>
+            <a class="navbar-brand mt-2 mt-xl-0 mr-3 mr-xl-2" href="" title="DPI+ <?php echo xla("Website"); ?>" rel="noopener" target="_blank">
+                <?php echo file_get_contents($GLOBALS['images_static_absolute'] . "/C:/wamp64/www/openemr/interface/ico/7.svg"); ?>
             </a>
             <?php endif; ?>
             <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -345,9 +330,9 @@ if (!empty($GLOBALS['kernel']->getEventDispatcher())) {
             <div class="collapse navbar-collapse" id="mainMenu" data-bind="template: {name: 'menu-template', data: application_data}"></div>
             <form name="frm_search_globals" class="form-inline">
                 <div class="input-group">
-                    <input type="text" id="anySearchBox" class="form-control-sm <?php echo $any_search_class ?> form-control" name="anySearchBox" placeholder="<?php echo xla("Search by any demographics") ?>" autocomplete="off">
+                    <input type="text" id="anySearchBox" class="form-control-sm <?php echo $any_search_class ?> form-control" name="anySearchBox" placeholder="<?php echo xla("Chercher...") ?>" autocomplete="off">
                     <div class="input-group-append">
-                        <button type="button" id="search_globals" class="btn btn-sm btn-secondary <?php echo $search_globals_class ?>" title='<?php echo xla("Search for patient by entering whole or part of any demographics field information"); ?>' data-bind="event: {mousedown: viewPtFinder.bind( $data, '<?php echo xla("The search field cannot be empty. Please enter a search term") ?>', '<?php echo attr($search_any_type); ?>')}"><i class="fa fa-search">&nbsp;</i></button>
+                        <button type="button" id="search_globals" class="btn btn-sm btn-secondary <?php echo $search_globals_class ?>" title='<?php echo xla("Recherchez un patient en saisissant tout ou partie des informations d'un champ démographique."); ?>' data-bind="event: {mousedown: viewPtFinder.bind( $data, '<?php echo xla("The search field cannot be empty. Please enter a search term") ?>', '<?php echo attr($search_any_type); ?>')}"><i class="fa fa-search">&nbsp;</i></button>
                     </div>
                 </div>
             </form>
@@ -359,6 +344,17 @@ if (!empty($GLOBALS['kernel']->getEventDispatcher())) {
             <div id="framesDisplay" data-bind="template: {name: 'tabs-frames', data: application_data}"></div>
         </div>
     </div>
+    <style type="text/css">
+        .navbar-light {
+                background-color: #0fb598!important;
+            }
+        .body_title {
+                 background-color: #0fb598!important;
+            }
+        .tabNotchosen, .tabsNoHover {
+                 border-bottom: 2px solid #495057!important;
+            }
+    </style>
     <script>
         ko.applyBindings(app_view_model);
 

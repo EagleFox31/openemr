@@ -1,20 +1,5 @@
 <?php
 
-/**
- * Patient Portal Home
- *
- * @package   OpenEMR
- * @link      http://www.open-emr.org
- * @author    Jerry Padgett <sjpadgett@gmail.com>
- * @author    Brady Miller <brady.g.miller@gmail.com>
- * @author    Shiqiang Tao <StrongTSQ@gmail.com>
- * @author    Ben Marte <benmarte@gmail.com>
- * @copyright Copyright (c) 2016-2022 Jerry Padgett <sjpadgett@gmail.com>
- * @copyright Copyright (c) 2019-2021 Brady Miller <brady.g.miller@gmail.com>
- * @copyright Copyright (c) 2020 Shiqiang Tao <StrongTSQ@gmail.com>
- * @copyright Copyright (c) 2021 Ben Marte <benmarte@gmail.com>
- * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
- */
 
 require_once('verify_session.php');
 require_once("$srcdir/patient.inc");
